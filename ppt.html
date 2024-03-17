@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Intravenous Fluid Monitoring Proposal</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .slide {
+            display: none;
+        }
+        .slide.active {
+            display: block;
+        }
+        .content {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1, h2, h3 {
+            color: #4285f4;
+        }
+        h2 {
+            margin-top: 30px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div id="slide1" class="slide active">
+            <h1>IoT Intravenous Fluid Monitoring and Alerting</h1>
+            <h2>Automated IV Bag Monitoring and Alert System</h2>
+            <p>Your Name or Organization's Name</p>
+            <p>Date of Presentation</p>
+        </div>
+
+        <div id="slide2" class="slide">
+            <h2>Introduction</h2>
+            <p>Brief background on the challenges faced during the Covid-19 pandemic.</p>
+            <p>Importance of Intravenous Therapy in patient care.</p>
+            <p>The need for an automated monitoring system.</p>
+        </div>
+
+        <!-- Add more slides as needed -->
+
+        <div id="slide15" class="slide">
+            <h2>Q&A</h2>
+            <p>Encourage questions from the audience.</p>
+        </div>
+
+        <div id="slide16" class="slide">
+            <h2>Contact Information</h2>
+            <p>Your contact details for further inquiries.</p>
+        </div>
+    </div>
+
+    <script>
+        let currentSlide = 1;
+
+        function showSlide(slideNumber) {
+            document.querySelectorAll('.slide').forEach(slide => slide.classList.remove('active'));
+            document.getElementById(`slide${slideNumber}`).classList.add('active');
+        }
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'ArrowRight') {
+                if (currentSlide < 16) {
+                    currentSlide++;
+                    showSlide(currentSlide);
+                }
+            } else if (event.key === 'ArrowLeft') {
+                if (currentSlide > 1) {
+                    currentSlide--;
+                    showSlide(currentSlide);
+                }
+            }
+        });
+
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>
